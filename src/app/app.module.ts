@@ -6,18 +6,26 @@ import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 
 //import components
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { CreateTodoComponent } from './components/create-todo/create-todo.component';
-import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
+import { HeaderComponent } from './components/template/header/header.component';
+import { SidebarComponent } from './components/template/sidebar/sidebar.component';
+import { FooterComponent } from './components/template/footer/footer.component';
+import { HomeComponent } from './views/home/home.component';
+import { TodoCrudComponent } from './views/todo-crud/todo-crud.component';
+import { ReadTodoComponent } from './components/todo/read-todo/read-todo.component';
+import { CreateTodoComponent } from './components/todo/create-todo/create-todo.component';
+import { UpdateTodoComponent } from './components/todo/update-todo/update-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent,
     HomeComponent,
-    NavbarComponent,
+    TodoCrudComponent,
+    ReadTodoComponent,
     CreateTodoComponent,
-    EditTodoComponent
+    UpdateTodoComponent
   ],
   imports: [
     BrowserModule,
