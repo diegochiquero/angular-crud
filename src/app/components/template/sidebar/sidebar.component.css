@@ -1,0 +1,5 @@
+.grad{
+  height: 100px;
+  background-color: #7e0af9; /* For browsers that do not support gradients */
+  background-image: linear-gradient(90deg, #7e0af9, #bf92f0);
+}
