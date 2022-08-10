@@ -1,5 +1,31 @@
-<div class="px-4 mt-3 text-center">
+<div class="px-4 mt-5 text-center">
   <div class="container text-center">
-    <p class="h2" style="color:#8F0AFD">Read Todos</p>
+    <!--<p class="h2" style="color:#8F0AFD">Read Todos</p>-->
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Completed</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of AllTodo">
+          <td>{{ todo.id }}</td>
+          <td>{{ todo.title }}</td>
+          <td>{{ todo.completed }}</td>
+          <td>
+            <button routerLink="/edit/{{todo.id}}" class="btn btn-outline-primary"><i
+                class="fa-solid fa-pen"></i></button>
+          </td>
+          <td>
+            <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 </div>
