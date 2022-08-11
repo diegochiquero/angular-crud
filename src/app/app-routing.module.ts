@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'todos', component: TodoCrudComponent},
   { path: 'todo/read', component: ReadTodoComponent },
   { path: 'todo/create', component: CreateTodoComponent },
-  { path: 'todo/update:id', component: UpdateTodoComponent },
+  { path: 'todo/update/:id', component: UpdateTodoComponent },
 ];
 
 @NgModule({
