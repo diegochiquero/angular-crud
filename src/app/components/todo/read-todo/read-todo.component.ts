@@ -8,7 +8,9 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./read-todo.component.css'],
 })
 export class ReadTodoComponent implements OnInit {
-  AllTodo: Todo[] = [];
+  public AllTodo: Todo[] = [];
+  public page: number = 1;
+  public pageSize: number = 5;
 
   constructor(private todoService: TodoService) {}
 
