@@ -10,7 +10,4 @@ export class TodoCrudComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  navigateToCreateTodo(): void {
-    this.router.navigate(['todo/create']);
-  }
 }
