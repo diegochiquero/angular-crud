@@ -1,23 +1,22 @@
 <div class="px-4 mt-5 text-center">
   <div class="container text-center">
-    <!--<p class="h2" style="color:#8F0AFD">Read Todos</p>-->
     <table class="table table-hover table-striped">
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Completed</th>
-          <th></th>
-          <th></th>
+          <th width="5%">Id</th>
+          <th width="75%">Title</th>
+          <th width="10%">Completed</th>
+          <th width="5%"></th>
+          <th width="5%"></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let todo of AllTodo">
+        <tr *ngFor="let todo of AllTodo | slice: (page-1) * pageSize : page * pageSize">
           <td>{{ todo.id }}</td>
           <td>{{ todo.title }}</td>
           <td>{{ todo.completed }}</td>
           <td>
-            <button routerLink="/edit/{{todo.id}}" class="btn btn-outline-primary"><i
+            <button routerLink="/todo/update/{{todo.id}}" class="btn btn-outline-primary"><i
                 class="fa-solid fa-pen"></i></button>
           </td>
           <td>
@@ -26,6 +25,7 @@
         </tr>
       </tbody>
     </table>
-
+    <ngb-pagination class="d-flex justify-content-center px-4 mt-4" [collectionSize]="AllTodo.length/2" [(page)]="page"
+      [boundaryLinks]="true" [rotate]="true"></ngb-pagination>
   </div>
 </div>
