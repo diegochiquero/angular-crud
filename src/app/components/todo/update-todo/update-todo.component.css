@@ -1,0 +1,12 @@
+.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited {
+  color:#7E0AF9 !important;
+  border-color: #7E0AF9 !important;
+  font-weight: bold !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #7E0AF9 !important;
+  color: white !important;
+  border-color: white !important;
+  font-weight: bold important;
+}
