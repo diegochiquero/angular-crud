@@ -3,12 +3,12 @@
     <p class="h1" style="color:#8F0AFD">Create todo</p>
   </div>
   <div class="container text-center w-75">
-    <form>
+    <form (submit)="createSubmit()">
       <div class="m-4">
-        <input class="form-control" type="text" placeholder="Title">
+        <input [(ngModel)]="todo.title" name="title"class="form-control" type="text" placeholder="Title">
       </div>
       <div class="m-4">
-        <input class="form-control" type="text" placeholder="Completed">
+        <input [(ngModel)]="todo.completed" name="completed" class="form-control" type="text" placeholder="Completed">
       </div>
       <div class="m-4">
         <input class="btn btn-outline-primary" type="submit" value="Create">
