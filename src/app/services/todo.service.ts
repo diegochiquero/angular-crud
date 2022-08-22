@@ -35,11 +35,7 @@ export class TodoService {
     return this.httpClient
       .post<Todo>(
         dataUrl,
-        JSON.stringify({
-          userId: 1,
-          title: 'holA',
-          completed: false,
-        }),
+        JSON.stringify({todo}),
         this.httpOptions
       )
       .pipe(catchError(this.handleError));
