@@ -1,0 +1,21 @@
+<div class="px-4 py-2 my-5 text-center">
+  <div class="container text-center">
+    <p class="h1" style="color:#8F0AFD">Update todo</p>
+  </div>
+  <div class="container text-center w-75">
+    <form (submit)="deleteSubmit()">
+      <div class="m-4">
+        <input disabled [(ngModel)]="todo.title" [value]="todo.title" name="title" class="form-control" type="text"
+          placeholder="Title">
+      </div>
+      <div class="m-4">
+        <input disabled [(ngModel)]="todo.completed" [value]="todo.completed" name="completed" class="form-control"
+          type="text" placeholder="Completed">
+      </div>
+      <div class="m-4">
+        <input class="btn btn-outline-primary" type="submit" value="Delete">
+        <a class="btn btn-outline-primary ms-2" routerLink="/todos">Close</a>
+      </div>
+    </form>
+  </div>
+</div>
