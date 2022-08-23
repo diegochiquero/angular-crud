@@ -13,13 +13,7 @@ import { Todo } from '../models/todo.model';
   providedIn: 'root',
 })
 export class TodoService {
-  private serverUrl: string = 'https://jsonplaceholder.typicode.com';
-
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
-  };
+  private serverUrl: string = 'http://localhost:9000';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -33,11 +27,7 @@ export class TodoService {
   public createTodo(todo: Todo): Observable<Todo> {
     let dataUrl: string = `${this.serverUrl}/todos`;
     return this.httpClient
-      .post<Todo>(
-        dataUrl,
-        JSON.stringify({todo}),
-        this.httpOptions
-      )
+      .post<Todo>(dataUrl, todo)
       .pipe(catchError(this.handleError));
   }
 
