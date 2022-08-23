@@ -20,12 +20,12 @@
                 class="fa-solid fa-pen"></i></button>
           </td>
           <td>
-            <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+            <button routerLink="/todo/delete/{{todo.id}}" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
           </td>
         </tr>
       </tbody>
     </table>
-    <ngb-pagination class="d-flex justify-content-center px-4 mt-4" [collectionSize]="AllTodo.length/2" [(page)]="page"
-      [boundaryLinks]="true" [rotate]="true"></ngb-pagination>
+    <ngb-pagination class="d-flex justify-content-center px-4 mt-4" [(page)]="page" [pageSize]="pageSize"
+      [collectionSize]="AllTodo.length"  [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
   </div>
 </div>
